@@ -1,4 +1,7 @@
-div.dv-control.sendbymail-button {
-    background-color: lightgreen;
-    color: lightcoral;
+div.dv-control.sendbymail-button ::before {
+    content: "\2709";
+    margin-right: 0.5em;
+    height: 15px;
+    border: 5px solid #ccc;
+    background-color: rgb(0, 0, 0);
 }

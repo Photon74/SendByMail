@@ -5,6 +5,11 @@ VisualStudioVersion = 17.0.32126.317
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SendByMailDesignerExtension", "SendByMailDesignerExtension\SendByMailDesignerExtension.csproj", "{35F088A7-61F9-4777-BB4F-CCE96A975B5A}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{57657087-44B7-4776-A871-A3DA54C5374D}"
+	ProjectSection(SolutionItems) = preProject
+		SendByMailControlDescription.xml = SendByMailControlDescription.xml
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

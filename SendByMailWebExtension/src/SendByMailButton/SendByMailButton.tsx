@@ -11,6 +11,7 @@ export interface SendByMailButtonState extends BaseControlState, SendByMailButto
 }
 
 export class SendByMailButton extends BaseControl<SendByMailButtonParams, SendByMailButtonState> {
+    
     protected createParams(): SendByMailButtonParams {
         return new SendByMailButtonParams();
     }

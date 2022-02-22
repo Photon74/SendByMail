@@ -67,10 +67,12 @@ namespace SendByMailDesignerExtension.Extension
                 {
                     standartCssClass,
                     PropertyFactory.GetNameProperty(),
+                    PropertyFactory.GetVisibilityProperty(),
+                    PropertyFactory.GetCustomCssClassesProperty(),
                     PropertyFactory.GetClickEvent(),
                 },
             };
-            PropertyFactory.AddSimpleBinding(controlDescription, true);
+            //PropertyFactory.AddSimpleBinding(controlDescription, true);
             return controlDescription;
         }
     }

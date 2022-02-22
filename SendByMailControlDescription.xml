@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Controls>
+	<Control Name="SendByMail" DisplayName="Send by mail">
+		<Properties>
+			<Property Type="Name" />
+			<Property Type="StandartCssClass" DefaultValue="sendbymail-button" />
+			<Property Type="CustomCssClasses" />
+			<Property Type="Visibility" />
+		</Properties>
+		<Events>
+			<Event Name="Click" DisplayName="On Click" />
+		</Events>
+	</Control>
+</Controls>
