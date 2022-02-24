@@ -1,5 +1,6 @@
-import { BaseControlParams, BaseControlState, BaseControl } from "@docsvision/webclient/System/BaseControl";
+import { BaseControlParams, BaseControlState, BaseControl, LayoutControl } from "@docsvision/webclient/System/BaseControl";
 import { ControlImpl } from "@docsvision/webclient/System/ControlImpl";
+import { IEventArgs } from "@docsvision/webclient/System/IEventArgs";
 import React from "react";
 
 export class SendByMailButtonParams extends BaseControlParams {
@@ -13,7 +14,7 @@ export interface SendByMailButtonState extends BaseControlState, SendByMailButto
 export class SendByMailButton extends BaseControl<SendByMailButtonParams, SendByMailButtonState> {
 
     async onClick(){
-
+        SendByMailButton_onClick;
     }
 
     protected createParams(): SendByMailButtonParams {
@@ -31,4 +32,13 @@ export class SendByMailButton extends BaseControl<SendByMailButtonParams, SendBy
             </div>
         );
     }
+}
+
+export function SendByMailButton_onClick(sender: LayoutControl, e: IEventArgs){
+    let controls = sender.layout.controls;
+    let cardInfo = sender.layout.cardInfo;
+    console.log(controls);
+    console.log(cardInfo);
+    
+    
 }

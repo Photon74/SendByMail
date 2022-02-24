@@ -55,10 +55,19 @@
     <Reference Include="Autofac.Extras.Ordering, Version=1.0.0.0, Culture=neutral, PublicKeyToken=84578aafd05fb485">
       <HintPath>..\..\Assemblies\Autofac\Autofac.Extras.Ordering.dll</HintPath>
     </Reference>
+    <Reference Include="DocsVision.BackOffice.Cards">
+      <HintPath>..\..\007.1\WebClient-Samples-master\Assemblies\Docsvision\DocsVision.BackOffice.Cards.dll</HintPath>
+    </Reference>
+    <Reference Include="DocsVision.BackOffice.ObjectModel, Version=5.5.0.0, Culture=neutral, PublicKeyToken=7148afe997f90519, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Program Files (x86)\Docsvision\5.5\Client\BaseObjects\DocsVision.BackOffice.ObjectModel.dll</HintPath>
+    </Reference>
     <Reference Include="DocsVision.BackOffice.WebClient">
       <HintPath>..\..\007.1\WebClient-Samples-master\Assemblies\Docsvision\DocsVision.BackOffice.WebClient.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="DocsVision.Platform.ObjectManager, Version=5.5.0.0, Culture=neutral, PublicKeyToken=7148afe997f90519" />
+    <Reference Include="DocsVision.Platform.ObjectModel, Version=5.5.0.0, Culture=neutral, PublicKeyToken=7148afe997f90519" />
     <Reference Include="DocsVision.Platform.WebClient">
       <HintPath>..\..\007.1\WebClient-Samples-master\Assemblies\Docsvision\DocsVision.Platform.WebClient.dll</HintPath>
       <SpecificVersion>False</SpecificVersion>
@@ -133,9 +142,7 @@
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Services\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

@@ -8,6 +8,7 @@ define(['@docsvision/webclient/System/$RequestManager', '@docsvision/webclient/S
     // должны экспортироваться (содержать ключевое слово export в объявлении).
     function someHandler(sender, e) {
         sender.layout.getService(LayoutServices.$CardId);
+        sender.layout.getService();
         sender.layout.getService($RequestManager.$RequestManager);
     }
 
@@ -30,6 +31,13 @@ define(['@docsvision/webclient/System/$RequestManager', '@docsvision/webclient/S
         function SendByMailButton() {
             return _super !== null && _super.apply(this, arguments) || this;
         }
+        SendByMailButton.prototype.onClick = function () {
+            return tslib.__awaiter(this, void 0, void 0, function () {
+                return tslib.__generator(this, function (_a) {
+                    return [2 /*return*/];
+                });
+            });
+        };
         SendByMailButton.prototype.createParams = function () {
             return new SendByMailButtonParams();
         };
