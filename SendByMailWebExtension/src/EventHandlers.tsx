@@ -7,5 +7,6 @@ import { $CardId } from "@docsvision/webclient/System/LayoutServices";
 // должны экспортироваться (содержать ключевое слово export в объявлении).
 export function someHandler(sender: LayoutControl, e: IEventArgs) {
     let cardId = sender.layout.getService($CardId);
+    let session = sender.layout.getService();
     let requestManager = sender.layout.getService($RequestManager);
 }

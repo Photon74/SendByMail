@@ -6,10 +6,10 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 
-[assembly: AssemblyTitle("SendByMailServerExtension1")]
-[assembly: AssemblyDescription("SendByMailServerExtension1")]
+[assembly: AssemblyTitle("SendByMailServerExtension")]
+[assembly: AssemblyDescription("SendByMailServerExtension")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("SendByMailServerExtension1")]
+[assembly: AssemblyProduct("SendByMailServerExtension")]
 [assembly: AssemblyCopyright("Copyright © 2020")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
