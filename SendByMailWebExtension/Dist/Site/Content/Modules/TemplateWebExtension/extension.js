@@ -38,7 +38,7 @@ define(['@docsvision/webclient/System/$RequestManager', '@docsvision/webclient/S
         };
         SendByMailButton.prototype.renderControl = function () {
             return (React__default["default"].createElement("div", null,
-                React__default["default"].createElement("button", null, "SendByMail")));
+                React__default["default"].createElement("a", { href: "mailto:mail@htmlacademy.ru&body=\u043F\u0440\u0438\u0432\u0435\u0442" }, "SendByMail")));
         };
         return SendByMailButton;
     }(BaseControl.BaseControl));

@@ -11,7 +11,7 @@ export interface SendByMailButtonState extends BaseControlState, SendByMailButto
 }
 
 export class SendByMailButton extends BaseControl<SendByMailButtonParams, SendByMailButtonState> {
-    
+
     protected createParams(): SendByMailButtonParams {
         return new SendByMailButtonParams();
     }
@@ -22,7 +22,9 @@ export class SendByMailButton extends BaseControl<SendByMailButtonParams, SendBy
 
     renderControl() {
         return (
-            <div><button>SendByMail</button></div>
+            <div>
+                <a href="mailto:mail@htmlacademy.ru&body=привет">SendByMail</a>
+            </div>
         );
     }
 }
