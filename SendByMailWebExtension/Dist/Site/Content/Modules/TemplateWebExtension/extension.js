@@ -1,4 +1,4 @@
-define(['@docsvision/webclient/System/$RequestManager', '@docsvision/webclient/System/LayoutServices', '@docsvision/webclient/System/ExtensionManager', 'tslib', '@docsvision/webclient/System/BaseControl', '@docsvision/webclient/System/ControlImpl', 'react'], (function ($RequestManager, LayoutServices, ExtensionManager, tslib, BaseControl, ControlImpl, React) { 'use strict';
+define(['@docsvision/webclient/System/ExtensionManager', 'tslib', '@docsvision/webclient/System/BaseControl', '@docsvision/webclient/System/ControlImpl', '@docsvision/webclient/System/Readwrite', 'react'], (function (ExtensionManager, tslib, BaseControl, ControlImpl, Readwrite, React) { 'use strict';
 
     function _interopDefaultLegacy (e) { return e && typeof e === 'object' && 'default' in e ? e : { 'default': e }; }
 
@@ -6,15 +6,14 @@ define(['@docsvision/webclient/System/$RequestManager', '@docsvision/webclient/S
 
     // Все функции, классы и переменные используемые за пределами модуля (т.е. файла)
     // должны экспортироваться (содержать ключевое слово export в объявлении).
-    function someHandler(sender, e) {
-        sender.layout.getService(LayoutServices.$CardId);
-        sender.layout.getService();
-        sender.layout.getService($RequestManager.$RequestManager);
-    }
+    // export function someHandler(sender: LayoutControl, e: IEventArgs) {
+    //     let cardIdService = sender.layout.getService($CardId);
+    //     let requestManager = sender.layout.getService($RequestManager);
+    //     requestManager.get
+    // }
 
     var EventHandlers = /*#__PURE__*/Object.freeze({
-        __proto__: null,
-        someHandler: someHandler
+        __proto__: null
     });
 
     var SendByMailButtonParams = /** @class */ (function (_super) {
@@ -24,6 +23,9 @@ define(['@docsvision/webclient/System/$RequestManager', '@docsvision/webclient/S
             _this.standardCssClass = "sendbymail-button";
             return _this;
         }
+        tslib.__decorate([
+            Readwrite.rw
+        ], SendByMailButtonParams.prototype, "services", void 0);
         return SendByMailButtonParams;
     }(BaseControl.BaseControlParams));
     var SendByMailButton = /** @class */ (function (_super) {
@@ -31,13 +33,6 @@ define(['@docsvision/webclient/System/$RequestManager', '@docsvision/webclient/S
         function SendByMailButton() {
             return _super !== null && _super.apply(this, arguments) || this;
         }
-        SendByMailButton.prototype.onClick = function () {
-            return tslib.__awaiter(this, void 0, void 0, function () {
-                return tslib.__generator(this, function (_a) {
-                    return [2 /*return*/];
-                });
-            });
-        };
         SendByMailButton.prototype.createParams = function () {
             return new SendByMailButtonParams();
         };
@@ -45,8 +40,17 @@ define(['@docsvision/webclient/System/$RequestManager', '@docsvision/webclient/S
             return new ControlImpl.ControlImpl(this.props, this.state, this.renderControl.bind(this));
         };
         SendByMailButton.prototype.renderControl = function () {
+            var _this = this;
+            this.state.description = this.layout.controls.get("documentName").value;
+            var url = this.state.services.urlResolver.resolveApiUrl('GetEmail', 'Email') + '?cardId=' + this.layout.cardInfo.id;
+            this.state.services.requestManager.get(url).then(function (e) {
+                var attr = document.createAttribute('href');
+                attr.value = "mailto:{0}&body={1}".format(e, _this.state.description);
+                document.getElementById('sendemailbuttonlink').attributes.setNamedItem(attr);
+                return "";
+            });
             return (React__default["default"].createElement("div", null,
-                React__default["default"].createElement("a", { href: "mailto:mail@htmlacademy.ru&body=\u043F\u0440\u0438\u0432\u0435\u0442" }, "SendByMail")));
+                React__default["default"].createElement("a", { id: 'sendemailbuttonlink', href: "" }, "SendByMail")));
         };
         return SendByMailButton;
     }(BaseControl.BaseControl));

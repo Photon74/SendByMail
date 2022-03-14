@@ -44,7 +44,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Docsvision.LayoutEditor.ObjectModel">
-      <HintPath>..\..\007.1\WebClient-Samples-master\Assemblies\Docsvision\DocsVision.LayoutEditor.ObjectModel.dll</HintPath>
+      <HintPath>..\..\..\LukoilAero\dv\dv\Server Extension\Assemblies\Docsvision\DocsVision.LayoutEditor.ObjectModel.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="DocsVision.Platform.StorageServer">
@@ -65,12 +65,12 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
     <Reference Include="WebLayoutsDesigner">
-      <HintPath>..\..\007.1\WebClient-Samples-master\Assemblies\Docsvision\WebLayoutsDesigner.exe</HintPath>
+      <HintPath>..\..\..\LukoilAero\dv\dv\Server Extension\Assemblies\Docsvision\WebLayoutsDesigner.exe</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="WindowsBase" />
     <Reference Include="Xceed.Wpf.Toolkit.Fixed">
-      <HintPath>..\..\007.1\WebClient-Samples-master\Assemblies\Others\Xceed.Wpf.Toolkit.Fixed.dll</HintPath>
+      <HintPath>..\..\..\LukoilAero\dv\dv\Server Extension\Assemblies\Others\Xceed.Wpf.Toolkit.Fixed.dll</HintPath>
       <Private>False</Private>
     </Reference>
   </ItemGroup>

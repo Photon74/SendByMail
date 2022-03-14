@@ -5,8 +5,9 @@ import { $CardId } from "@docsvision/webclient/System/LayoutServices";
 
 // Все функции, классы и переменные используемые за пределами модуля (т.е. файла)
 // должны экспортироваться (содержать ключевое слово export в объявлении).
-export function someHandler(sender: LayoutControl, e: IEventArgs) {
-    let cardId = sender.layout.getService($CardId);
-    let session = sender.layout.getService();
-    let requestManager = sender.layout.getService($RequestManager);
-}
+// export function someHandler(sender: LayoutControl, e: IEventArgs) {
+//     let cardIdService = sender.layout.getService($CardId);
+//     let requestManager = sender.layout.getService($RequestManager);
+//     requestManager.get
+    
+// }
